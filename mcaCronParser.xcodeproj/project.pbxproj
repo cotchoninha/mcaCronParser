@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1821790328294D9200F2293C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821790228294D9200F2293C /* main.swift */; };
+		1821790A28294DB300F2293C /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821790928294DB300F2293C /* DataModels.swift */; };
+		1821790C28294DC100F2293C /* CronParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821790B28294DC100F2293C /* CronParser.swift */; };
+		1821790F28294DE000F2293C /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1821790E28294DE000F2293C /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,8 @@
 /* Begin PBXFileReference section */
 		182178FF28294D9200F2293C /* mcaCronParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mcaCronParser; sourceTree = BUILT_PRODUCTS_DIR; };
 		1821790228294D9200F2293C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1821790928294DB300F2293C /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		1821790B28294DC100F2293C /* CronParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821790F28294DE000F2293C /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				1821790228294D9200F2293C /* main.swift */,
+				1821790928294DB300F2293C /* DataModels.swift */,
+				1821790B28294DC100F2293C /* CronParser.swift */,
 			);
 			path = mcaCronParser;
 			sourceTree = "<group>";
@@ -78,6 +86,9 @@
 			dependencies = (
 			);
 			name = mcaCronParser;
+			packageProductDependencies = (
+				1821790E28294DE000F2293C /* ArgumentParser */,
+			);
 			productName = mcaCronParser;
 			productReference = 182178FF28294D9200F2293C /* mcaCronParser */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 182178F628294D9200F2293C;
+			packageReferences = (
+				1821790D28294DE000F2293C /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 1821790028294D9200F2293C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821790C28294DC100F2293C /* CronParser.swift in Sources */,
 				1821790328294D9200F2293C /* main.swift in Sources */,
+				1821790A28294DB300F2293C /* DataModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M7ZBSHCGRM;
+				DEVELOPMENT_TEAM = VK6WWJ78Q4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -284,6 +300,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1821790D28294DE000F2293C /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1821790E28294DE000F2293C /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1821790D28294DE000F2293C /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 182178F728294D9200F2293C /* Project object */;
 }
